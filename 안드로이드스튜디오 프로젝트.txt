@@ -1,0 +1,31 @@
+* 안드로이드 스튜디오 전역 변수(클래스)
+
+1. Application을 상속 받도록 클래스 생성
+ >> public class User extends Application
+
+2. AndroidManifest.xml 파일 내 <application </application> 내부에 클래스 이름 지정
+ >> android:name=".User"
+
+
+이런 식으로 사용!
+((User) getApplication()).getId();
+((User) getApplication()).setId(str);
+
+
+* MPAndroidChart 사용법
+
+1. settings.gradle 파일 내 
+  >> dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }  >>>> 추가
+    }
+
+2. build.gradle 파일 내 
+  >> dependencies {
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'  >>>> 추가
+    }
+
+3. Gradle 동기화!!
+
